@@ -1,0 +1,6 @@
+[submodule "CS202_Seminar"]
+	path = CS202_Seminar
+	url = https://github.com/khanh47/CS202_Seminar.git
+[submodule "CS202_GameProject"]
+	path = CS202_GameProject
+	url = https://github.com/khanh47/CS202_GameProject.git
