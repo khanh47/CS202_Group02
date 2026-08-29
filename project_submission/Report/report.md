@@ -29,61 +29,33 @@
 
 ---
 
-## 3. Class Diagram(s)
+## 3. Class Diagram
 
-<!-- INSTRUCTION: Paste 1-2 SIMPLIFIED mermaid diagrams here (10-15 classes max). -->
-<!-- GitHub renders ```mermaid natively; no extension needed on github.com. -->
+### 3.1 Main Architecture
 
-### 3.1 Overview Diagram
-
-<!-- TODO: Replace the example below with your chosen overview (e.g., App → Scene → GameWorld → GameObject). -->
-
-```mermaid
-classDiagram
-    class App {
-        -SceneManager manager
-        -SceneFactory factory
-        +run()
-    }
-    class Scene {
-        <<abstract>>
-        +update()
-        +render()
-    }
-    class SceneManager {
-        -stack~Scene~ sceneStack
-        +pushScene()
-        +popScene()
-    }
-    class GameWorld {
-        -WorldMap worldMap
-        -WorldObjectStore store
-        +loadLevel()
-        +update()
-    }
-    class GameObject {
-        <<abstract>>
-        -PhysicsBody body
-        +spawn()
-        +onContact()
-    }
-
-    App *-- SceneManager
-    SceneManager "1" *-- "many" Scene
-    Scene <|-- InGameScene
-    InGameScene *-- GameWorld
-    GameWorld *-- GameObject
+```text
+App
+ └── SceneManager
+      └── Scene
+           ├── Menu / Settings / Editor scenes
+           └── InGameScene
+                └── GameWorld
+                     ├── WorldMap
+                     ├── WorldObjectStore
+                     │    └── GameObject
+                     │         ├── Player
+                     │         ├── Enemy
+                     │         ├── Block
+                     │         ├── Item
+                     │         ├── Fireball
+                     │         └── KoopaShell
+                     ├── PhysicsWorld
+                     └── Rendering / Interaction
 ```
 
-*Fig. 1 — High-level overview (simplified). See Appendix for detailed subsystem diagrams.*
+### 3.2 Class Diagram
 
-### 3.2 Detailed Diagram (Optional)
-
-<!-- TODO: Add ONE detailed diagram if required (e.g., Player State or World pipeline). Otherwise delete this subsection. -->
-<!-- ```mermaid -->
-<!-- classDiagram -->
-<!--     class Player { ... } -->
-<!-- ``` -->
+![Class Diagram](class_diagram.png)
 
 ---
 

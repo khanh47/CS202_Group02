@@ -1,0 +1,434 @@
+classDiagram
+    direction TB
+
+    %% =========================
+    %% Global Services
+    %% =========================
+
+    class ResourceManager {
+        <<singleton>>
+        -textures
+        -fonts
+        +getTexture()
+        +getFont()
+    }
+
+    class GameSettings {
+        <<singleton>>
+        -gameMode
+        -musicVolume
+        -soundVolume
+        +getInstance()
+        +save()
+        +load()
+    }
+
+    %% =========================
+    %% App & Scene Layer
+    %% =========================
+
+    class App {
+        -SceneManager manager
+        -SceneFactory factory
+        +run()
+        +processEvents()
+        +update()
+        +render()
+    }
+
+    class Scene {
+        <<abstract>>
+        -bool isActive
+        -string name
+        +init()
+        +update()
+        +render()
+    }
+
+    class SceneManager {
+        -stack~Scene~ sceneStack
+        -SceneFactory factory
+        +pushScene()
+        +popScene()
+        +replaceScene()
+        +update()
+        +render()
+    }
+
+    class SceneFactory {
+        -map~string,Factory~ factories
+        +registerScene()
+        +createScene()
+    }
+
+    class InGameScene {
+        -GameWorld gameWorld
+        -Camera camera
+        -ScoreManager scoreManager
+        +update()
+        +render()
+        +handleInput()
+    }
+
+    class ButtonMenu {
+        -vector~Button~ buttons
+        -int focusedIndex
+        +addButton()
+        +processEvent()
+        +render()
+    }
+
+    class ICommand {
+        <<interface>>
+        +execute()
+        +getName()
+    }
+
+    class FunctionalCommand {
+        -string name
+        -function action
+        +execute()
+        +getName()
+    }
+
+    %% =========================
+    %% World Layer
+    %% =========================
+
+    class GameWorld {
+        <<facade>>
+        -WorldMap worldMap
+        -WorldObjectStore store
+        -PhysicsWorld physicsWorld
+        +loadLevel()
+        +spawnItem()
+        +update()
+        +render()
+    }
+
+    class WorldMap {
+        -TileMap tileMap
+        -int gridWidth
+        -int gridHeight
+        +rebuild()
+        +renderTiles()
+        +getBounds()
+    }
+
+    class WorldObjectStore {
+        -vector~GameObject~ objects
+        -vector~PlayerController~ controllers
+        +addObject()
+        +removeObject()
+        +update()
+        +cleanupDestroyed()
+    }
+
+    class GameObjectFactory {
+        -map~string,Creator~ creators
+        +registerObject()
+        +createPlayer()
+        +createEnemy()
+        +createItem()
+    }
+
+    class PhysicsWorld {
+        -b2WorldId worldId
+        -int subSteps
+        +update()
+        +getContactEvents()
+        +getSensorEvents()
+    }
+
+    class TileMap {
+        -vector~TileInfo~ tiles
+        -int gridWidth
+        +setTile()
+        +update()
+        +draw()
+    }
+
+    %% =========================
+    %% Entity Layer
+    %% =========================
+
+    class GameObject {
+        <<abstract>>
+        -PhysicsBody body
+        -bool pendingDestroy
+        +spawn()
+        +update()
+        +render()
+        +onContact()
+        +destroy()
+    }
+
+    class Behaviour {
+        <<abstract>>
+        -GameObject owner
+        +attach()
+        +detach()
+        +update()
+    }
+
+    class Moveable {
+        -bool movingLeft
+        -bool movingRight
+        +startMoveLeft()
+        +startMoveRight()
+        +startJump()
+    }
+
+    class Animatable {
+        -Animator animator
+        -Texture spritesheet
+        +playAnimation()
+        +updateVisuals()
+        +renderVisual()
+    }
+
+    class Damageable {
+        -int health
+        -int maxHealth
+        +takeDamage()
+        +heal()
+        +isAlive()
+    }
+
+    class PhysicsBody {
+        -b2BodyId bodyId
+        -b2ShapeId shapeId
+        +destroy()
+        +isValid()
+        +getHitbox()
+    }
+
+    %% =========================
+    %% Entity Hierarchies
+    %% =========================
+
+    class Player {
+        -PlayerState state
+        -IAttackStrategy attackStrategy
+        -string character
+        +update()
+        +attack()
+        +setState()
+    }
+
+    class Enemy {
+        <<abstract>>
+        -float moveSpeed
+        -bool isDying
+        +update()
+        +onStomp()
+        +turnAround()
+    }
+
+    class Goomba {
+        -bool stomped
+        +onStomp()
+        +update()
+    }
+
+    class Koopa {
+        -bool reviving
+        +onStomp()
+        +update()
+    }
+
+    class Block {
+        -bool breakable
+        +onContact()
+        +setBreakable()
+    }
+
+    class Item {
+        <<abstract>>
+        -bool emerging
+        -float emergenceTime
+        +startEmerging()
+        +update()
+        +onPickup()
+    }
+
+    class Coin {
+        +onPickup()
+    }
+
+    class SuperMushroom {
+        +onPickup()
+    }
+
+    class FireFlower {
+        +onPickup()
+    }
+
+    %% =========================
+    %% Player State / Strategy
+    %% =========================
+
+    class PlayerState {
+        <<abstract>>
+        +getStateName()
+        +getMoveSpeedMultiplier()
+        +isInvincible()
+    }
+
+    class NormalState {
+        +getStateName()
+    }
+
+    class SuperState {
+        +getStateName()
+    }
+
+    class FireState {
+        +getStateName()
+        +createAttackStrategy()
+    }
+
+    class PlayerStateDecorator {
+        <<abstract>>
+        -PlayerState wrappedState
+        +getStateName()
+        +update()
+    }
+
+    class MegaStateDecorator {
+        -float remainingTime
+        +isExpired()
+        +update()
+    }
+
+    class StarManStateDecorator {
+        -float remainingTime
+        +isExpired()
+        +update()
+    }
+
+    class IAttackStrategy {
+        <<interface>>
+        +executeAttack()
+    }
+
+    class FireballAttackStrategy {
+        +executeAttack()
+    }
+
+    class NoAttackStrategy {
+        +executeAttack()
+    }
+
+    %% =========================
+    %% Cross-Cutting
+    %% =========================
+
+    class Animator {
+        -AnimationSet animations
+        -string currentAnimation
+        +play()
+        +stop()
+        +update()
+    }
+
+    class AnimationSet {
+        -map~string,AnimationClip~ clips
+        +getClip()
+    }
+
+    class AnimationClip {
+        -vector~AnimationFrame~ frames
+        -bool looping
+        +getFrame()
+    }
+
+    class Camera {
+        -View view
+        -Vector2f target
+        +setTarget()
+        +update()
+        +getView()
+    }
+
+    class ScoreManager {
+        -int score
+        -int coins
+        -int lives
+        +addScore()
+        +addCoins()
+        +addLives()
+        +reset()
+    }
+
+    %% =========================
+    %% Relationships
+    %% =========================
+
+    App *-- SceneManager
+    App *-- SceneFactory
+
+    SceneManager "1" *-- "*" Scene
+    SceneManager o-- SceneFactory
+
+    Scene <|-- InGameScene
+
+    Scene *-- ButtonMenu
+    ButtonMenu *-- ICommand
+    ICommand <|.. FunctionalCommand
+
+    InGameScene *-- GameWorld
+    InGameScene *-- Camera
+    InGameScene *-- ScoreManager
+
+    GameWorld *-- WorldMap
+    GameWorld *-- WorldObjectStore
+    GameWorld *-- GameObjectFactory
+    GameWorld *-- PhysicsWorld
+
+    WorldMap *-- TileMap
+    WorldObjectStore "1" *-- "*" GameObject
+    GameObjectFactory ..> GameObject
+
+    GameObject "1" *-- "*" Behaviour
+    GameObject "0..1" o-- PhysicsBody
+    PhysicsBody ..> PhysicsWorld
+
+    Behaviour <|-- Moveable
+    Behaviour <|-- Animatable
+    Behaviour <|-- Damageable
+
+    Animatable *-- Animator
+    Animator *-- AnimationSet
+    AnimationSet *-- AnimationClip
+
+    GameObject <|-- Player
+    GameObject <|-- Enemy
+    GameObject <|-- Block
+    GameObject <|-- Item
+
+    Enemy <|-- Goomba
+    Enemy <|-- Koopa
+
+    Item <|-- Coin
+    Item <|-- SuperMushroom
+    Item <|-- FireFlower
+
+    Player *-- PlayerState
+    Player *-- IAttackStrategy
+
+    PlayerState <|-- NormalState
+    PlayerState <|-- SuperState
+    PlayerState <|-- FireState
+    PlayerState <|-- PlayerStateDecorator
+
+    PlayerStateDecorator *-- PlayerState
+    PlayerStateDecorator <|-- MegaStateDecorator
+    PlayerStateDecorator <|-- StarManStateDecorator
+
+    PlayerState ..> IAttackStrategy
+    IAttackStrategy <|.. FireballAttackStrategy
+    IAttackStrategy <|.. NoAttackStrategy
+
+    ResourceManager ..> Animatable
+    GameSettings ..> App
