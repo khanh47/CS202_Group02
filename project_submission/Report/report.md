@@ -30,41 +30,46 @@ The system is organized into the following cooperating subsystems:
 - **Presentation and persistence:** SFML renders the world, camera view, animations, HUD, effects, and UI, while `ResourceManager` and audio managers provide shared assets; `SaveLoadGame`, `GameSettings`, `ScoreManager`, and `LeaderboardManager` provide JSON-backed session, configuration, scoring, and leaderboard data.
 
 ```text
-┌───────────────────────┐
-│ App                   │
-│ SFML window + loop    │
-│ events / timing       │
-└───────────┬───────────┘
-            ▼
-┌──────────────────────────────────────────────────────┐
-│ SceneManager                                          │
-│ scene stack + SceneFactory + transitions               │
-└──────────────────────────┬───────────────────────────┘
-                           ▼
-                 ┌──────────────────────┐
-                 │ Current Scene        │
-                 │ menus / editor /     │
-                 │ InGameScene          │
-                 └──────────┬───────────┘
-                            ▼
-                 ┌──────────────────────┐
-                 │ GameWorld            │
-                 │ map + object store   │
-                 └───────┬────────┬─────┘
-                         │        │
-                         ▼        ▼
-                 ┌───────────┐  ┌────────────────┐
-                 │ WorldMap  │  │ GameObject     │
-                 │ tiles     │  │ entities       │
-                 └─────┬─────┘  └───────┬────────┘
-                       │                │
-                       └───────┬────────┘
-                               ▼
-                 ┌──────────────────────────┐
-                 │ Box2D Physics +          │
-                 │ behaviours / animation   │
-                 │ interaction / rendering  │
-                 └──────────────────────────┘
++------------------------------+
+| App                          |
+| SFML window, events, timing  |
++---------------+--------------+
+                |
+                v
++------------------------------+
+| SceneManager                 |
+| scene stack + SceneFactory   |
+| + deferred transitions       |
++---------------+--------------+
+                |
+                v
++------------------------------+
+| Current Scene                |
+| menus, editor, InGameScene  |
++---------------+--------------+
+                |
+                v
++------------------------------+
+| GameWorld                    |
+| map + object store           |
++---------------+--------------+
+                |
+        +-------+-------+
+        |               |
+        v               v
++---------------+ +---------------+
+| WorldMap      | | GameObject    |
+| tiles         | | entities      |
++-------+-------+ +-------+-------+
+        |                 |
+        +--------+--------+
+                 |
+                 v
++------------------------------+
+| Box2D physics, behaviours,   |
+| animation, interaction,      |
+| and rendering                |
++------------------------------+
 
 JSON maps/prefabs ──▶ LevelDataLoader / PrefabRegistry ──▶ GameWorld
 ```
