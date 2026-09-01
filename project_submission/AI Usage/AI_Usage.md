@@ -75,3 +75,59 @@ Heuristic VS AI
 - ChatGPT. GPT-5.5 Thinking, OpenAI, chat.openai.com, prompt: “can the current settings menu be reused effectively? dont implement anything”, used to assess whether the existing settings UI could be embedded during gameplay.
 - ChatGPT. GPT-5.5 Thinking, OpenAI, chat.openai.com, prompt: “then plan to refractor it to be reusable ingame”, used to design a reusable settings panel and fully freezing pause overlay.
 - ChatGPT. GPT-5.5 Thinking, OpenAI, chat.openai.com, prompt: “look at D:\0. APCS\4. Group Projects\CS202_GameProject\assets\guis\Square_premade_buttons_16x16px, i want to add a pause button at the right corner of the screen, where the button is the texture starting from 256,0 with size 16x16, it top-left corner becomes 256,16 on hover, clicking it acts the same way as pressing esc”, used to specify the pause button’s atlas cells, position, hover state, and behavior.
+- Codex. 5.6 Luna, OpenAI, prompt: “when the enemy touch the pipe, it will stuck there without changing direction”, used to fix enemy collision behavior.
+- Codex. 5.6 Luna, OpenAI, prompt: “the distance that enemies detect the pipe is a little bit long”, used to reduce enemy pipe-detection distance.
+- Codex. 5.6 Luna, OpenAI, prompt: “I want the enemies to change the direction right after hitting the pipe”, used to make enemies reverse immediately after pipe contact.
+- Codex. 5.6 Luna, OpenAI, prompt: “add a horizontal pipe into map1”, used to add a horizontal pipe to Map 1.
+- Codex. 5.6 Luna, OpenAI, prompt: “make the piranha plant get out and get in the piranha pipe”, used to animate piranha plants entering and leaving pipes.
+- Codex. 5.6 Luna, OpenAI, prompt: “make it dive deeper a little bit so that there is no hitbox out of the pipe, also when it raise up, make it be entirely on top of the pipe”, used to correct piranha-plant positioning and hitboxes.
+- Codex. 5.6 Luna, OpenAI, prompt: “also, in map 1, erase the piranha plant and replace it with a STATIC Piranha pipe - The Piranha stay there without moving”, used to add a static piranha pipe.
+- Codex. 5.6 Luna, OpenAI, prompt: “Add warp pipes. When move into a warp pipe, player will teleport to another pipe. Also, add ability for Player to use the warp pipe - both vertical and horizontal pipes”, used to implement warp pipes.
+- Codex. 5.6 Luna, OpenAI, prompt: “add 2 warp pipes in map 2”, used to add two warp pipes to Map 2.
+- Codex. 5.6 Luna, OpenAI, prompt: “how to use the warp pipe?”, used to explain warp-pipe controls.
+- Codex. 5.6 Luna, OpenAI, prompt: “add another warp pipe that has no piranha plant”, used to configure pipes without piranha plants.
+- Codex. 5.6 Luna, OpenAI, prompt: “what if there are more than 2 warp pipe?”, used to support multiple warp pipes.
+- Codex. 5.6 Luna, OpenAI, prompt: “add warpTarget and warpID”, used to add warp destinations and identifiers.
+- Codex. 5.6 Luna, OpenAI, prompt: “update it in the map1, map2, spawns json files too”, used to update level data for warp pipes.
+- Codex. 5.6 Luna, OpenAI, prompt: “add keybind settings to get down into the pipe”, used to add downward pipe controls.
+- Codex. 5.6 Luna, OpenAI, prompt: “Currently, the logic of the spawning object and blocks are so trash. Refactor the logic: Split it into 2 layers: 1. Tile Layer... 2. Object Layer... Also, use the prefab pattern too.”, used to redesign map and object spawning.
+- Codex. 5.6 Luna, OpenAI, prompt: “change the minigames map too”, used to apply the map-data refactor to minigames.
+- Codex. 5.6 Luna, OpenAI, prompt: “The star is falling through the blocks”, used to fix star collision.
+- Codex. 5.6 Luna, OpenAI, prompt: “I think we should merge both into one - titleLayer and objectLayer - since when there are too many objects, it is really hard to imagine...”, used to consolidate map layers and pipe metadata.
+- Codex. 5.6 Luna, OpenAI, prompt: “change the maps' data too”, used to migrate existing map files.
+- Codex. 5.6 Luna, OpenAI, prompt: “delete "G" with "ground" and replace it with "#" and brick”, used to simplify map symbols.
+- Codex. 5.6 Luna, OpenAI, prompt: “review the changed things such as ObjectKind::Tile, the extra collision inside the Block.cpp, .... If anything is unnecessary, then clean up them”, used to remove unnecessary code.
+- Codex. 5.6 Luna, OpenAI, prompt: “only use a SINGLE number and character in maps”, used to simplify map encoding.
+- Codex. 5.6 Luna, OpenAI, prompt: “add a feature for blocks so that we can set it to be breakable or not...”, used to implement breakable blocks.
+- Codex. 5.6 Luna, OpenAI, prompt: “when landed after falling ~25 blocks, the blocks weren't broken”, used to fix high-impact block breaking.
+- Codex. 5.6 Luna, OpenAI, prompt: “when breaking a block create the effect of that block shattering like the original mario”, used to add block-shattering effects.
+- Codex. 5.6 Luna, OpenAI, prompt: “in addition to breakable blocks, add breakable pipes too.”, used to make pipes breakable.
+- Codex. 5.6 Luna, OpenAI, prompt: “add mega mushroom to the game and mega state for the player...”, used to add the Mega Mushroom and Mega State.
+- Codex. 5.6 Luna, OpenAI, prompt: “1. Make the mushroom bouncing around like the star... 2. When the player touch the mushroom, it starts transforming...”, used to refine Mega Mushroom interactions.
+- Codex. 5.6 Luna, OpenAI, prompt: “1. no sparkle for mushroom... 4. when the pipe segment broken, delete the hitbox too...”, used to refine Mega State effects.
+- Codex. 5.6 Luna, OpenAI, prompt: “Pipe segment hitboxes weren't physically destroyed when broken, fix it”, used to remove destroyed pipe hitboxes.
+- Codex. 5.6 Luna, OpenAI, prompt: “add 1-up mushroom, that adds +1 extra life to total count...”, used to add the 1-Up Mushroom.
+- Codex. 5.6 Luna, OpenAI, prompt: “when using a warped pipe, make the player dive down into the pipe and get up out of the target pipe, while freezing the world”, used to animate pipe travel and freeze gameplay.
+- Codex. 5.6 Luna, OpenAI, prompt: “add 2 horizontal warped pipes and a pair of non-reversed, reversed vertical warped pipes into map 2”, used to expand Map 2 pipe content.
+- Codex. 5.6 Luna, OpenAI, prompt: “fix the horizontal pipes... The pipe should be entirely on top of the ground.”, used to correct horizontal-pipe placement.
+- Codex. 5.6 Luna, OpenAI, prompt: “to enter a horizontal pipe, just move into it, no need for Interact”, used to simplify horizontal-pipe entry.
+- Codex. 5.6 Luna, OpenAI, prompt: “when get in or out of the pipe, play the "pipe.mp3" sound”, used to add pipe sound effects.
+- Codex. 5.6 Luna, OpenAI, prompt: “when player transform to another form, play power_up.mp3...”, used to add transformation and extra-life sounds.
+- Codex. 5.6 Luna, OpenAI, prompt: “play starman_theme.mp3 in mega starman state and mega state”, used to add special background music.
+- Codex. 5.6 Luna, OpenAI, prompt: “fire state and super state when get hit will play transformation to normal state + play power_down.mp3”, used to add power-down transformations.
+- Codex. 5.6 Luna, OpenAI, prompt: “when shoot fireball, play fireball.mp3 Also, add particles for fireball too”, used to add fireball audio and particles.
+- Codex. 5.6 Luna, OpenAI, prompt: “when the player walking, play footstep.mp3 when the player jumping, play jump.mp3 when the player die, play dead.mp3 when the player run out of lives and defeated, play game_over.mp3”, used to add player movement, death, and game-over sounds.
+- Codex. 5.6 Luna, OpenAI, prompt: “when dying, wait for the dead sound to be almost finished then revive”, used to synchronize death audio and respawning.
+- Codex. 5.6 Luna, OpenAI, prompt: “why the sound only played when it finished itself before?... Fix it, also fix it with other sounds too”, used to allow immediate and overlapping sound playback.
+- Codex. 5.6 Luna, OpenAI, prompt: “when breaking blocks and pipes, play break.mp3 when killing an enemy, play kill.mp3”, used to add breaking and enemy-kill sounds.
+- Codex. 5.6 Luna, OpenAI, prompt: “when hit the lucky block, if there is power up, make it sprouting out of the lucky block and play sprout.mp3”, used to animate power-ups emerging from blocks.
+- Codex. 5.6 Luna, OpenAI, prompt: “Add feature to build maps inside the game, including add enemies, players, objects, blocks, ... in each cells of the map, and save it into files so that we can play it later...”, used to implement the in-game map editor.
+- Codex. 5.6 Luna, OpenAI, prompt: “1. Make the map bigger, using mouse wheel to zoom in/out... Hold left mouse to add multiple blocks...”, used to add zooming, panning, and bulk editing.
+- Codex. 5.6 Luna, OpenAI, prompt: “1. zoom out is good but make the camera move outside the map edges too... 2. Ctrl + Z to undo, Ctrl + Y to redo...”, used to improve editor navigation and controls.
+- Codex. 5.6 Luna, OpenAI, prompt: “2. Instead of letters, place the actual sprite to the map... 3. For the lucky blocks, add parameters... 4. For the pipes, add all of its parameters...”, used to improve object placement and configuration.
+- Codex. 5.6 Luna, OpenAI, prompt: “change the name of the transparent_coin_block_spritesheet.png... All of the brick and coin block must have animation...”, used to update block textures and animation.
+- Codex. 5.6 Luna, OpenAI, prompt: “make the animation of bricks and coin blocks synced”, used to synchronize block animations.
+- Codex. 5.6 Luna, OpenAI, prompt: “increase maximum pipe warp id to 20”, used to expand warp-ID capacity.
+- Codex. 5.6 Luna, OpenAI, prompt: “Add save/load game feature only for the default levels only - not the minigames...”, used to implement save/load functionality.
+- Codex. 5.6 Luna, OpenAI, prompt: “Bug: 1. Can not input the name of the slot 2. The used coin block texture after loading is not working...”, used to fix save-slot naming and restored textures.
+- Codex. 5.6 Luna, OpenAI, prompt: “when in save screen, use keyboard + arrow buttons and lock the mouse”, used to improve save-screen controls. 
