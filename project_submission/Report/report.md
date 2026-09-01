@@ -145,7 +145,7 @@ App
 
 - The main goal of our architecture was to make the gameplay systems easier to extend while keeping the physics stable and object ownership clear. Instead of putting all the logic into one large class, we separated the program into different systems for scenes, world simulation, physics, rendering, input, animation, and object behaviours. This makes the code easier to follow and lets us modify one system without affecting too many unrelated parts.
 
-- During development, our group tried to follow the SOLID principles when making design decisions. For example, we used abstract interfaces for scenes, separated physics from rendering, and used behaviours for abilities that are not needed by every object. Despite this phylosophy, the design changed many times as we added more features, so not every part of the project follows these principles perfectly.
+- During development, our group tried to follow the SOLID principles when making design decisions. For example, we used abstract interfaces for scenes, separated physics from rendering, and used behaviours for abilities that are not needed by every object. Despite this philosophy, the design changed many times as we added more features, so not every part of the project follows these principles perfectly.
 
 ### 5.1 Principles
 
@@ -199,8 +199,7 @@ App
 
 ## 6. Conclusion
 
-- In conclusion, our group developed a complete 2D Mario-style platformer using C++20, SFML 3, and Box2D 3.1. During development, we learned how object-oriented principles and design patterns can be applied to organize a large program with many connected gameplay systems. We also learned that design decisions involve trade-offs, and that an architecture often needs to be refactored as the project grows. Although some parts can still be improved, the final architecture supports the current features and provides a reasonable foundation for adding new content in the future.
----
+- In conclusion, our group developed a 2D Mario-style platformer using C++20, SFML 3, and Box2D 3.1. Throughout the development process, we learned how object-oriented principles and design patterns can be used to organize a large program containing many connected gameplay systems. We also learned that every design decision involves trade-offs and that an architecture often needs to be reviewed and refactored as the project grows. Although some parts of the design can still be improved, the final architecture supports the required features and provides a reasonable foundation for adding new content in the future.
 
 ## Appendix
 
