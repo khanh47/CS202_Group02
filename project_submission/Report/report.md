@@ -9,23 +9,71 @@
 
 ## 1. Introduction
 
-<!-- TODO: Write 4-6 sentences. What is the game? Goals? Scope? Target users? -->
-<!-- Example: This project is a 2D Mario-like platformer that supports ... -->
+This project is a 2D side-scrolling platform game inspired by classic Mario gameplay, implemented in C++20 with SFML 3 for graphics, audio, windowing, and input, and Box2D 3.1.1 for physics and collision handling. Players navigate themed levels, defeat enemies, collect coins and power-ups, activate checkpoints, and reach the flagpole while managing score, lives, and a time limit. The game supports solo play, local cooperative play, and a battle-style minigame for two local players or one player against a heuristic AI opponent. An in-game map editor and JSON-based level and prefab data make it possible to create and test custom layouts without changing the core gameplay code. The project is intended for players who enjoy short, replayable platforming challenges and for demonstrating object-oriented game architecture in an educational desktop application.
 
 ### 1.1 Project Overview
 
-<!-- TODO: 1 paragraph — game genre, main features (single/multiplayer, level editor, save/load, minigame). -->
+The application begins at a scene-based main menu where players can start or continue a default campaign, select a play mode and character, open settings and leaderboards, or enter the map editor. Default play contains three campaign levels with grassland, underground, and castle-themed content; levels include terrain, slopes, pipes and warps, Goombas, Koopas, Piranha Plants, blocks, coins, power-ups, checkpoints, and flagpole goals. Players may play alone as Mario or Luigi, or play locally with Mario and Luigi together. Minigame mode loads a dedicated arena for two-player competition or a Mario-versus-heuristic-AI match. Campaign sessions persist score, coins, lives, time, checkpoint progress, destroyed tiles, and relevant object state in JSON save files, while completed runs contribute to a persistent leaderboard. The map editor supports placing supported terrain and gameplay objects, validates player spawns, saves a custom JSON map, and allows the result to be playtested in the game.
 
 ---
 
 ## 2. System Overview
 
-<!-- TODO: 5-8 bullets + 1 high-level architecture figure. Keep it simple. -->
+The system is organized into the following cooperating subsystems:
+
+- **Application and timing:** `App` owns the SFML window and main loop, polls input events, separates simulation from visual updates, and caps rendering at 60 FPS.
+- **Scene management:** `SceneManager` maintains a stack of screens, while `SceneFactory` creates menus, settings, level and character selection, gameplay, save/load, score, leaderboard, and editor scenes.
+- **Gameplay world:** `InGameScene` coordinates the active `GameWorld`, camera, HUD, score, pause flow, win conditions, and game-over handling.
+- **Map and content loading:** `LevelDataLoader`, `PrefabRegistry`, and `PrefabSpawner` read JSON level data, resolve reusable prefab definitions, build tile terrain, and create gameplay objects from map symbols and placements.
+- **Entities and behaviours:** `GameObject` provides the common entity interface for players, enemies, blocks, items, pipes, and projectiles; reusable behaviours, controllers, and player state objects add movement, animation, attacks, damage, power-ups, and AI.
+- **Physics and interaction:** `PhysicsWorld` advances Box2D bodies, collision filters, contacts, and sensors; `WorldInteractionSystem` translates those events into gameplay effects such as damage, item collection, enemy defeat, warps, and block destruction.
+- **Presentation and persistence:** SFML renders the world, camera view, animations, HUD, effects, and UI, while `ResourceManager` and audio managers provide shared assets; `SaveLoadGame`, `GameSettings`, `ScoreManager`, and `LeaderboardManager` provide JSON-backed session, configuration, scoring, and leaderboard data.
+
+```text
+┌───────────────────────┐
+│ App                   │
+│ SFML window + loop    │
+│ events / timing       │
+└───────────┬───────────┘
+            ▼
+┌──────────────────────────────────────────────────────┐
+│ SceneManager                                          │
+│ scene stack + SceneFactory + transitions               │
+└──────────────────────────┬───────────────────────────┘
+                           ▼
+                 ┌──────────────────────┐
+                 │ Current Scene        │
+                 │ menus / editor /     │
+                 │ InGameScene          │
+                 └──────────┬───────────┘
+                            ▼
+                 ┌──────────────────────┐
+                 │ GameWorld            │
+                 │ map + object store   │
+                 └───────┬────────┬─────┘
+                         │        │
+                         ▼        ▼
+                 ┌───────────┐  ┌────────────────┐
+                 │ WorldMap  │  │ GameObject     │
+                 │ tiles     │  │ entities       │
+                 └─────┬─────┘  └───────┬────────┘
+                       │                │
+                       └───────┬────────┘
+                               ▼
+                 ┌──────────────────────────┐
+                 │ Box2D Physics +          │
+                 │ behaviours / animation   │
+                 │ interaction / rendering  │
+                 └──────────────────────────┘
+
+JSON maps/prefabs ──▶ LevelDataLoader / PrefabRegistry ──▶ GameWorld
+```
 
 ### 2.1 Architecture Layers
 
-<!-- TODO: Describe the layering: App (loop) → Scene (screens) → World (map + entities) → Entity (GameObject) → Physics/Animation. -->
-<!-- Mention fixed-timestep loop: App → SceneManager → GameWorld (1/60 s). -->
+The top-level control flow is a two-rate loop. `App::run()` polls SFML events, adds the measured frame time to a `FixedStepAccumulator`, consumes zero or more fixed simulation steps, updates visual-only systems using the current frame delta, and renders the frame. During gameplay, the fixed-step path is `App → SceneManager → InGameScene → GameWorld`; the accumulator supplies a simulation delta of 1/60 second, so movement, game rules, and physics are not tied directly to variable render-frame duration. `PhysicsWorld` further advances Box2D using its configured internal substeps, then buffered contact and sensor events are processed by the world interaction system.
+
+The architecture follows a layered ownership model. The application layer owns the window and timing; the scene layer owns screen-specific input, UI, lifecycle, and transitions; the world layer owns the loaded map, entities, object creation, interactions, camera-facing gameplay state, and rendering coordination; and the entity layer models individual actors through the polymorphic `GameObject` base class. Physics bodies and collision data are attached to entities through the physics layer, while animation, audio, and SFML drawing provide the presentation layer. This separation allows menu and editor screens to reuse the same application and scene infrastructure while gameplay scenes reuse world services for campaign levels, custom maps, and minigames.
 
 ---
 
