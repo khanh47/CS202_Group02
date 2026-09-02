@@ -1,0 +1,267 @@
+{
+    "prefabs": {
+        "empty": {
+            "solid": false
+        },
+        "brick": {
+            "texture": "brick_spritesheet",
+            "animationId": "brick",
+            "solid": true,
+            "breakable": false
+        },
+        "breakable_brick": {
+            "texture": "brick_spritesheet",
+            "animationId": "brick",
+            "solid": true,
+            "breakable": true
+        },
+        "arena_brick": {
+            "texture": "brick_spritesheet",
+            "animationId": "brick",
+            "solid": true,
+            "breakable": false
+        },
+        "player_mario": {
+            "kind": "player",
+            "typeKey": "Player",
+            "texture": "mario_spritesheet",
+            "animationId": "mario",
+            "size": [
+                36,
+                80
+            ],
+            "offset": [
+                10,
+                0
+            ],
+            "addController": true
+        },
+        "player_luigi": {
+            "kind": "player",
+            "typeKey": "Player",
+            "texture": "luigi_spritesheet",
+            "animationId": "luigi",
+            "size": [
+                36,
+                80
+            ],
+            "offset": [
+                10,
+                0
+            ],
+            "addController": true
+        },
+        "player_mario_large": {
+            "kind": "player",
+            "typeKey": "Player",
+            "texture": "mario_spritesheet",
+            "animationId": "mario",
+            "size": [
+                54,
+                120
+            ],
+            "offset": [
+                10,
+                0
+            ],
+            "addController": true
+        },
+        "player_luigi_large": {
+            "kind": "player",
+            "typeKey": "Player",
+            "texture": "luigi_spritesheet",
+            "animationId": "luigi",
+            "size": [
+                54,
+                120
+            ],
+            "offset": [
+                10,
+                0
+            ],
+            "addController": true
+        },
+        "player_mario_static": {
+            "kind": "player",
+            "typeKey": "Player",
+            "texture": "mario_spritesheet",
+            "animationId": "mario",
+            "size": [
+                67.5,
+                150
+            ],
+            "offset": [
+                10,
+                0
+            ]
+        },
+        "player_luigi_static": {
+            "kind": "player",
+            "typeKey": "Player",
+            "texture": "luigi_spritesheet",
+            "animationId": "luigi",
+            "size": [
+                67.5,
+                150
+            ],
+            "offset": [
+                10,
+                0
+            ]
+        },
+        "enemy_goomba": {
+            "kind": "enemy",
+            "typeKey": "Goomba",
+            "texture": "goomba_spritesheet",
+            "animationId": "goomba",
+            "size": [
+                50,
+                65
+            ],
+            "offset": [
+                0,
+                5
+            ]
+        },
+        "enemy_koopa": {
+            "kind": "enemy",
+            "typeKey": "Koopa",
+            "texture": "koopa_spritesheet",
+            "animationId": "koopa",
+            "size": [
+                64,
+                100
+            ]
+        },
+        "enemy_piranha_plant": {
+            "kind": "enemy",
+            "typeKey": "PiranhaPlant",
+            "texture": "piranha_plant_spritesheet",
+            "animationId": "piranha_plant",
+            "size": [
+                78,
+                105
+            ],
+            "offset": [
+                0,
+                5
+            ]
+        },
+        "item_fire_flower": {
+            "kind": "item",
+            "typeKey": "FireFlower",
+            "texture": "mario_and_items",
+            "size": [
+                54,
+                54
+            ],
+            "centerVertically": true
+        },
+        "item_coin": {
+            "kind": "item",
+            "typeKey": "Coin",
+            "texture": "coin_spritesheet",
+            "size": [
+                64,
+                64
+            ],
+            "centerVertically": true
+        },
+        "item_super_mushroom": {
+            "kind": "item",
+            "typeKey": "SuperMushroom",
+            "texture": "mario_and_items",
+            "size": [
+                54,
+                54
+            ],
+            "centerVertically": true
+        },
+        "item_one_up_mushroom": {
+            "kind": "item",
+            "typeKey": "OneUpMushroom",
+            "texture": "mario_and_items",
+            "size": [
+                54,
+                54
+            ],
+            "centerVertically": true
+        },
+        "item_mega_mushroom": {
+            "kind": "item",
+            "typeKey": "MegaMushroom",
+            "texture": "mega_mushroom_spritesheet",
+            "size": [
+                384,
+                308
+            ],
+            "centerVertically": true
+        },
+        "item_super_star": {
+            "kind": "item",
+            "typeKey": "SuperStar",
+            "texture": "mario_and_items",
+            "size": [
+                54,
+                54
+            ],
+            "centerVertically": true
+        },
+        "item_flagpole": {
+            "kind": "item",
+            "typeKey": "Flagpole",
+            "texture": "goal_flag_spritesheet",
+            "size": [
+                128,
+                896
+            ],
+            "centerVertically": true
+        },
+        "item_checkpoint_flag": {
+            "kind": "item",
+            "typeKey": "CheckpointFlag",
+            "texture": "checkpoint_flag_spritesheet",
+            "size": [
+                48,
+                96
+            ],
+            "offset": [
+                0,
+                -16
+            ]
+        },
+        "item_mega_coin": {
+            "kind": "item",
+            "typeKey": "MegaCoin",
+            "texture": "mega_coin_spritesheet",
+            "size": [
+                96,
+                96
+            ],
+            "centerVertically": true
+        },
+        "block_coin": {
+            "kind": "block",
+            "typeKey": "CoinBlock",
+            "texture": "brick_spritesheet",
+            "animationId": "coin_block",
+            "size": [
+                64,
+                64
+            ],
+            "addSeamFilter": true,
+            "coinCapacity": 10
+        },
+        "block_lucky": {
+            "kind": "block",
+            "typeKey": "LuckyBlock",
+            "texture": "lucky_block_spritesheet",
+            "luckyTexture": "default",
+            "size": [
+                64,
+                64
+            ],
+            "addSeamFilter": true
+        }
+    }
+}

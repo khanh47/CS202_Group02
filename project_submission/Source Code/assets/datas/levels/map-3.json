@@ -1,0 +1,1380 @@
+{
+    "tileMapping": {
+        ".": "empty",
+        "#": "breakable_brick",
+        "b": "brick",
+        "A": "terrain_underground",
+        "X": "terrain_castle",
+        "M": "player_mario",
+        "L": "player_luigi",
+        "e": "enemy_goomba",
+        "k": "enemy_koopa",
+        "c": "item_coin",
+        "?": "block_lucky",
+        "B": "block_coin_single",
+        "o": "item_mega_coin",
+        "T": "item_checkpoint_flag",
+        "D": "item_flagpole"
+    },
+    "layer": [
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA............................................................",
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA............................................................",
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA............................................................",
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA............................................................",
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA................................AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA............................................................",
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.......c..c..c..c..c..c..c......AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA............................................................",
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.....c.....................c....AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA............................................................",
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA..........c..c..o..c..c.........AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA............................................................",
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA................................AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA............................................................",
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA................................AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA............................................................",
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.......................AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA............................................................",
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.......................AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.....................................................................AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA............................................................",
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA........................................................................................................................AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.....................................................................AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA............................................................",
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA........................................................................................................................AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.....................................................................AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA............................................................",
+        "........................................................AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA..........c.c.c.c.......................................................................................................AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA..............................................c..............c.......AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA............................................................",
+        "...............c.......................c........c.......AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.....................cc.................................................................................................AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.....................c.........c............c...c..........c...c.....AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA....................c.c............c........................",
+        ".............c...c...................c........c.............................................................................k...........c..c..........c...........c...................................................cc............................................................................................c.e.........c.........c...c.....k.......................................................c..........................c..................................c.....c.........c.c.......................",
+        "...................................c......................................................................................###B?B###.................cB##c.......c...c......................................c.........c..c.........................................................................................c..#B#B#....c...................##B?B##............B##............................cc...................cc..........c...c............................c....................................XXXX.....",
+        "............e.........................#....................c.c....................................................................................c.......c.....................................cc.......c...c....B?#....c......................................................................................c........................................o..........................c.......c......c..c.................c..c.............................cc.........c......................................XXXX.....",
+        "..........#B###.....................##.......B?#.........c.....c..........c...........................c....................................##B.................................................c..c............................c.................c........c...............c.................c...c.................................................................................................c....c...............c....c...........................c..c......c.....................................XXXXXXXXXX..",
+        "..................................###...................................c...c...........#B#.........c...c......B....................B#........................##B..................AA#B#......c....c.........................c...c.............c.....c............c...............c.......c.......c........................e..............k....................e..........k..T.........................................................................c....c.........................D.................XXXXXXXXXX..",
+        "...........................k..............................................................................................AA...........................e....................................................k................................c.....c....................................c...........c........AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA................................e..................................AA..................AAAAAAAAAAAAAAAAAAAAA..........XXXXXXXXXX..",
+        "....................AAAAAAAAAAA...........................................AA...........................................AA........................AAAAAAAAAA....................AA.....................AAAAAAAAAAAAAAAAA.........................T............................................................AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA............k..........AAAAAAAAAAAAAAAAAA......................AA..................AAAAAAAAAAAAAAAAAAAAAAAAAAAAA......XXXXX..XXX..",
+        "...M.L...........e..AAAAAAAAAAA.........AAAAAAAAA..............e..............................k.................................e.............k..AAAAAAAAAA..........T....k.............e.............AAAAAAAAAAAAAAAAA..........e..............AAA..........................................................AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAA..............k.......................AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA..XXXXX..XXX..",
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA......AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.......AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.......AAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAA........AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA......AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.......AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.......AAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAA........AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA......AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.......AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.......AAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAA........AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA......AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.......AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.......AAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAA........AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA......AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.......AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.......AAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAA........AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA......AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.......AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.......AAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAA........AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA......AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.......AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.......AAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAA........AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA......AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.......AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.......AAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAA...AAAAAAAAAAAAAAAAAA........AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    ],
+    "placements": [
+        {
+            "column": 74,
+            "row": 16,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "bottom",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ]
+                }
+            }
+        },
+        {
+            "column": 82,
+            "row": 23,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "top",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": true,
+                "warpID": 30,
+                "warpTarget": 31,
+                "addSeamFilter": true,
+                "contentsStatic": false
+            }
+        },
+        {
+            "column": 182,
+            "row": 9,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "top",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": true,
+                "warpID": 31,
+                "warpTarget": 30,
+                "addSeamFilter": true,
+                "contentsStatic": false
+            }
+        },
+        {
+            "column": 98,
+            "row": 16,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "bottom",
+                "pipeBodyLength": 2,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false
+            }
+        },
+        {
+            "column": 108,
+            "row": 23,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "top",
+                "pipeBodyLength": 2,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ]
+                }
+            }
+        },
+        {
+            "column": 188,
+            "row": 23,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "top",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false
+            }
+        },
+        {
+            "column": 228,
+            "row": 23,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "top",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ]
+                }
+            }
+        },
+        {
+            "column": 380,
+            "row": 22,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "top",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false
+            }
+        },
+        {
+            "column": 400,
+            "row": 16,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "bottom",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ]
+                }
+            }
+        },
+        {
+            "column": 422,
+            "row": 23,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "top",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ]
+                }
+            }
+        },
+        {
+            "column": 136,
+            "row": 20,
+            "spec": {
+                "kind": "block",
+                "typeKey": "LuckyBlock",
+                "texture": "",
+                "size": [
+                    64,
+                    64
+                ],
+                "addSeamFilter": true,
+                "luckyTexture": "invisible",
+                "luckyCapacity": 1,
+                "luckyOptions": [
+                    {
+                        "item": "OneUpMushroom",
+                        "weight": 1
+                    }
+                ]
+            }
+        },
+        {
+            "column": 233,
+            "row": 20,
+            "spec": {
+                "kind": "block",
+                "typeKey": "LuckyBlock",
+                "texture": "",
+                "size": [
+                    64,
+                    64
+                ],
+                "addSeamFilter": true,
+                "luckyTexture": "invisible",
+                "luckyCapacity": 1,
+                "luckyOptions": [
+                    {
+                        "item": "SuperStar",
+                        "weight": 1
+                    },
+                    {
+                        "item": "Coin",
+                        "weight": 1
+                    }
+                ]
+            }
+        },
+        {
+            "column": 246,
+            "row": 16,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "bottom",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": 0
+                }
+            }
+        },
+        {
+            "column": 246,
+            "row": 23,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "top",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": 0
+                }
+            }
+        },
+        {
+            "column": 248,
+            "row": 16,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "bottom",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.0625
+                }
+            }
+        },
+        {
+            "column": 248,
+            "row": 23,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "top",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.0625
+                }
+            }
+        },
+        {
+            "column": 250,
+            "row": 16,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "bottom",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.125
+                }
+            }
+        },
+        {
+            "column": 250,
+            "row": 23,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "top",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.125
+                }
+            }
+        },
+        {
+            "column": 252,
+            "row": 16,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "bottom",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.1875
+                }
+            }
+        },
+        {
+            "column": 252,
+            "row": 23,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "top",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.1875
+                }
+            }
+        },
+        {
+            "column": 254,
+            "row": 16,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "bottom",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.25
+                }
+            }
+        },
+        {
+            "column": 254,
+            "row": 23,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "top",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.25
+                }
+            }
+        },
+        {
+            "column": 256,
+            "row": 16,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "bottom",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.3125
+                }
+            }
+        },
+        {
+            "column": 256,
+            "row": 23,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "top",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.3125
+                }
+            }
+        },
+        {
+            "column": 258,
+            "row": 16,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "bottom",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.375
+                }
+            }
+        },
+        {
+            "column": 258,
+            "row": 23,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "top",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.375
+                }
+            }
+        },
+        {
+            "column": 260,
+            "row": 16,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "bottom",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.4375
+                }
+            }
+        },
+        {
+            "column": 260,
+            "row": 23,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "top",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.4375
+                }
+            }
+        },
+        {
+            "column": 262,
+            "row": 16,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "bottom",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.5
+                }
+            }
+        },
+        {
+            "column": 262,
+            "row": 23,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "top",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.5
+                }
+            }
+        },
+        {
+            "column": 264,
+            "row": 16,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "bottom",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.5625
+                }
+            }
+        },
+        {
+            "column": 264,
+            "row": 23,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "top",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.5625
+                }
+            }
+        },
+        {
+            "column": 266,
+            "row": 16,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "bottom",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.625
+                }
+            }
+        },
+        {
+            "column": 266,
+            "row": 23,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "top",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.625
+                }
+            }
+        },
+        {
+            "column": 268,
+            "row": 16,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "bottom",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.6875
+                }
+            }
+        },
+        {
+            "column": 268,
+            "row": 23,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "top",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.6875
+                }
+            }
+        },
+        {
+            "column": 270,
+            "row": 16,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "bottom",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.75
+                }
+            }
+        },
+        {
+            "column": 270,
+            "row": 23,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "top",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.75
+                }
+            }
+        },
+        {
+            "column": 272,
+            "row": 16,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "bottom",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.8125
+                }
+            }
+        },
+        {
+            "column": 272,
+            "row": 23,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "top",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.8125
+                }
+            }
+        },
+        {
+            "column": 274,
+            "row": 16,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "bottom",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.875
+                }
+            }
+        },
+        {
+            "column": 274,
+            "row": 23,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "top",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.875
+                }
+            }
+        },
+        {
+            "column": 276,
+            "row": 16,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "bottom",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.9375
+                }
+            }
+        },
+        {
+            "column": 276,
+            "row": 23,
+            "spec": {
+                "kind": "pipe",
+                "typeKey": "Pipe",
+                "texture": "pipes_spritesheet",
+                "pipeOrientation": "vertical",
+                "pipeEndSide": "top",
+                "pipeBodyLength": 1,
+                "pipeIsWarp": false,
+                "addSeamFilter": true,
+                "contentsStatic": false,
+                "contents": {
+                    "kind": "enemy",
+                    "typeKey": "PiranhaPlant",
+                    "texture": "piranha_plant_spritesheet",
+                    "animationId": "piranha_plant",
+                    "size": [
+                        78,
+                        105
+                    ],
+                    "offset": [
+                        0,
+                        5
+                    ],
+                    "piranhaMotion": "sine",
+                    "piranhaWavePeriod": 4,
+                    "piranhaWavePhase": -0.9375
+                }
+            }
+        }
+    ],
+    "background": "parallax_underground",
+    "music": "underground_theme",
+    "theme": "underground",
+    "prefabs": {
+        "terrain_underground": {
+            "texture": "at_underground",
+            "solid": true,
+            "autotile": "underground_terrain",
+            "addSeamFilter": true
+        },
+        "terrain_castle": {
+            "texture": "at_castle",
+            "solid": true,
+            "autotile": "castle_terrain",
+            "addSeamFilter": true
+        },
+        "block_coin_single": {
+            "kind": "block",
+            "typeKey": "CoinBlock",
+            "texture": "underground_brick_spritesheet",
+            "animationId": "coin_block",
+            "size": [
+                64,
+                64
+            ],
+            "addSeamFilter": true,
+            "coinCapacity": 1
+        }
+    }
+}
