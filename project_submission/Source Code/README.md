@@ -10,6 +10,10 @@ The project includes campaign and local multiplayer play, a heuristic-AI
 opponent, an in-game map editor, and JSON-driven levels and prefabs. It is
 released under the [MIT License](LICENSE).
 
+You can find our demo video here: [Click here](https://youtu.be/B0TbLXBX19k)
+
+![Game Main Menu](assets/backgrounds/description_image.png)
+
 ## Installation
 
 ### Prerequisites
