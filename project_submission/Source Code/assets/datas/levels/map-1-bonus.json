@@ -1,0 +1,126 @@
+{
+    "background": "parallax_underground",
+    "theme": "underground",
+    "music": "underground_theme",
+    "tileMapping": {
+        ".": "empty",
+        "M": "player_mario",
+        "L": "player_luigi",
+        "A": "terrain_underground",
+        "b": "brick",
+        "B": "block_coin",
+        "?": "block_lucky",
+        "c": "item_coin",
+        "o": "item_mega_coin",
+        "Q": "pipe_warp_arrival",
+        "W": "pipe_warp_exit"
+    },
+    "layer": [
+        "...................................",
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "A.................................A",
+        "A.................................A",
+        "A.................................A",
+        "A..............ococo..............A",
+        "A.............bbb?bbb.............A",
+        "A.................................A",
+        "A........Bccocc.....ccoccB........A",
+        "A.......bbbbbbb.....bbbbbbb...c...A",
+        "A.............................c...A",
+        "A.................................A",
+        "A.LMQ.ccccccccccccccccccccccc.W...A",
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    ],
+    "placements": [
+        {
+            "row": 8,
+            "column": 9,
+            "spec": {
+                "kind": "block",
+                "typeKey": "CoinBlock",
+                "texture": "underground_brick_spritesheet",
+                "animationId": "coin_block",
+                "size": [
+                    64,
+                    64
+                ],
+                "addSeamFilter": true,
+                "coinCapacity": 15
+            }
+        },
+        {
+            "row": 8,
+            "column": 25,
+            "spec": {
+                "kind": "block",
+                "typeKey": "CoinBlock",
+                "texture": "underground_brick_spritesheet",
+                "animationId": "coin_block",
+                "size": [
+                    64,
+                    64
+                ],
+                "addSeamFilter": true,
+                "coinCapacity": 15
+            }
+        },
+        {
+            "row": 6,
+            "column": 17,
+            "spec": {
+                "kind": "block",
+                "typeKey": "LuckyBlock",
+                "texture": "underground_lucky_block_spritesheet",
+                "luckyTexture": "default",
+                "luckyCapacity": 1,
+                "luckyOptions": [
+                    {
+                        "item": "OneUpMushroom",
+                        "weight": 1.0
+                    }
+                ]
+            }
+        }
+    ],
+    "prefabs": {
+        "terrain_underground": {
+            "texture": "at_underground",
+            "solid": true,
+            "autotile": "underground_terrain",
+            "addSeamFilter": true
+        },
+        "pipe_warp_arrival": {
+            "kind": "pipe",
+            "typeKey": "Pipe",
+            "texture": "pipes_spritesheet",
+            "size": [
+                128,
+                192
+            ],
+            "pipeOrientation": "vertical",
+            "pipeEndSide": "top",
+            "pipeBodyLength": 2,
+            "pipeIsWarp": true,
+            "warpID": 2,
+            "warpTarget": 1,
+            "addSeamFilter": true
+        },
+        "pipe_warp_exit": {
+            "kind": "pipe",
+            "typeKey": "Pipe",
+            "texture": "pipes_spritesheet",
+            "size": [
+                128,
+                192
+            ],
+            "pipeOrientation": "vertical",
+            "pipeEndSide": "top",
+            "pipeBodyLength": 2,
+            "pipeIsWarp": true,
+            "warpID": 3,
+            "warpTarget": 4,
+            "warpLevel": "assets/datas/levels/map-1.json",
+            "addSeamFilter": true
+        }
+    }
+}

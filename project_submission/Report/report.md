@@ -1,9 +1,6 @@
-# CS202 — Game Project Report
+# CS202 --- Game Project Report
 
-> **Course:** CS202 — Programming Systems | **Group:** 02 | **Date:** 2026-08-28
-> **Members:** [Võ Gia Minh — 25125030], [Phạm Huy Khánh — 25125055], [Nguyễn Quốc Thịnh — 25125066], [Chu Nguyễn Gia Khánh - 25125085]
-> **Instructor:** [Name] <!-- TODO: fill -->
-> **Repository:** `CS202_GameProject` (SFML 3 + Box2D 3.1)
+**Course:** CS202 --- Programming Systems | **Group:** 02 | **Date:** 2026-09-02
 
 ---
 
@@ -71,12 +68,12 @@ The system is organized into the following cooperating subsystems:
 | and rendering                |
 +------------------------------+
 
-JSON maps/prefabs ──▶ LevelDataLoader / PrefabRegistry ──▶ GameWorld
+JSON maps/prefabs -> LevelDataLoader / PrefabRegistry -> GameWorld
 ```
 
 ### 2.1 Architecture Layers
 
-The top-level control flow is a two-rate loop. `App::run()` polls SFML events, adds the measured frame time to a `FixedStepAccumulator`, consumes zero or more fixed simulation steps, updates visual-only systems using the current frame delta, and renders the frame. During gameplay, the fixed-step path is `App → SceneManager → InGameScene → GameWorld`; the accumulator supplies a simulation delta of 1/60 second, so movement, game rules, and physics are not tied directly to variable render-frame duration. `PhysicsWorld` further advances Box2D using its configured internal substeps, then buffered contact and sensor events are processed by the world interaction system.
+The top-level control flow is a two-rate loop. `App::run()` polls SFML events, adds the measured frame time to a `FixedStepAccumulator`, consumes zero or more fixed simulation steps, updates visual-only systems using the current frame delta, and renders the frame. During gameplay, the fixed-step path is `App -> SceneManager -> InGameScene -> GameWorld`; the accumulator supplies a simulation delta of 1/60 second, so movement, game rules, and physics are not tied directly to variable render-frame duration. `PhysicsWorld` further advances Box2D using its configured internal substeps, then buffered contact and sensor events are processed by the world interaction system.
 
 The architecture follows a layered ownership model. The application layer owns the window and timing; the scene layer owns screen-specific input, UI, lifecycle, and transitions; the world layer owns the loaded map, entities, object creation, interactions, camera-facing gameplay state, and rendering coordination; and the entity layer models individual actors through the polymorphic `GameObject` base class. Physics bodies and collision data are attached to entities through the physics layer, while animation, audio, and SFML drawing provide the presentation layer. This separation allows menu and editor screens to reuse the same application and scene infrastructure while gameplay scenes reuse world services for campaign levels, custom maps, and minigames.
 
@@ -88,22 +85,22 @@ The architecture follows a layered ownership model. The application layer owns t
 
 ```text
 App
- └── SceneManager
-      └── Scene
-           ├── Menu / Settings / Editor scenes
-           └── InGameScene
-                └── GameWorld
-                     ├── WorldMap
-                     ├── WorldObjectStore
-                     │    └── GameObject
-                     │         ├── Player
-                     │         ├── Enemy
-                     │         ├── Block
-                     │         ├── Item
-                     │         ├── Fireball
-                     │         └── KoopaShell
-                     ├── PhysicsWorld
-                     └── Rendering / Interaction
+ +-- SceneManager
+      +-- Scene
+           +-- Menu / Settings / Editor scenes
+           +-- InGameScene
+                +-- GameWorld
+                     +-- WorldMap
+                     +-- WorldObjectStore
+                     |    +-- GameObject
+                     |         +-- Player
+                     |         +-- Enemy
+                     |         +-- Block
+                     |         +-- Item
+                     |         +-- Fireball
+                     |         +-- KoopaShell
+                     +-- PhysicsWorld
+                     +-- Rendering / Interaction
 ```
 
 ### 3.2 Class Diagram
@@ -125,7 +122,7 @@ The project incorporates several classic object-oriented design patterns to stru
 | 5 | **Command** | `ICommand`, `FunctionalCommand`, `ButtonMenu` | Encapsulates UI button callbacks, menu actions, and debug shortcuts into standalone executable objects, decoupling menu dispatchers from concrete scene operations. |
 | 6 | **Singleton** | `ResourceManager`, `GameSettings`, `Audio::SoundManager`, `Audio::MusicManager` | Provides unified global access and lifecycle management for heavy shared resources (textures, audio streams, fonts, user settings), preventing duplicate GPU/memory allocations. |
 
-### 4.1 Pattern in Detail — State Pattern
+### 4.1 Pattern in Detail --- State Pattern
 
 **Context / Problem:**
 
@@ -134,7 +131,7 @@ In a platformer game, the playable character alternates between distinct power-u
 - **Super Mario**: Enlarged scale ($1.5\times$ physical and visual height), boosted jump multiplier ($1.15\times$), ability to break brick blocks from underneath, and degrades to Normal Mario with temporary invincibility frames when damaged rather than dying.
 - **Fire Mario**: Retains enlarged scale ($1.5\times$), uses a distinct fire costume spritesheet, and gains the capability to cast bouncing fireballs (`Fireball`) on attack input, degrading to Super Mario upon taking damage.
 
-If implemented naively using procedural flags or an enumeration (`enum class Form { Normal, Super, Fire }`), the `Player` class would become congested with complex conditional branches (`switch (form)` or chained `if-else`) across almost every method—such as movement computation, jump physics, collision callbacks, animation assignment, and attack handling. Adding a new form (e.g., Ice Mario) would force modifications across dozens of disjoint switch statements throughout `Player.cpp`, directly violating the Open/Closed Principle (OCP) and Single Responsibility Principle (SRP).
+If implemented naively using procedural flags or an enumeration (`enum class Form { Normal, Super, Fire }`), the `Player` class would become congested with complex conditional branches (`switch (form)` or chained `if-else`) across almost every method---such as movement computation, jump physics, collision callbacks, animation assignment, and attack handling. Adding a new form (e.g., Ice Mario) would force modifications across dozens of disjoint switch statements throughout `Player.cpp`, directly violating the Open/Closed Principle (OCP) and Single Responsibility Principle (SRP).
 
 **Solution in our code:**
 
@@ -181,7 +178,7 @@ We implemented the Gang-of-Four **State Pattern** to encapsulate state-specific 
 
 ---
 
-### 4.2 Pattern in Detail — Decorator Pattern
+### 4.2 Pattern in Detail --- Decorator Pattern
 
 **Context / Problem:**
 
@@ -280,14 +277,3 @@ We implemented the **Decorator Pattern** via `PlayerStateDecorator` (`include/Ga
 ## 6. Conclusion
 
 - In conclusion, our group developed a 2D Mario-style platformer using C++20, SFML 3, and Box2D 3.1. Throughout the development process, we learned how object-oriented principles and design patterns can be used to organize a large program containing many connected gameplay systems. We also learned that every design decision involves trade-offs and that an architecture often needs to be reviewed and refactored as the project grows. Although some parts of the design can still be improved, the final architecture supports the required features and provides a reasonable foundation for adding new content in the future.
-
-## Appendix
-
----
-
-## References
-
-<!-- TODO: Add references if needed. -->
-<!-- - SFML 3 Documentation: https://www.sfml-dev.org/ -->
-<!-- - Box2D 3.1 Documentation: https://box2d.org/ -->
-<!-- - Gamma et al., Design Patterns: Elements of Reusable Object-Oriented Software -->
